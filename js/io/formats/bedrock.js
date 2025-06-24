@@ -1233,7 +1233,8 @@ var codec = new Codec('bedrock', {
 				}
 			})
 
-			var model = content['minecraft:geometry'][0]
+			var model = data['minecraft:geometry'][0]
+			
 			if (index != undefined) {
 				data['minecraft:geometry'][index] = model
 			} else {
