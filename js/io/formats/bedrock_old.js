@@ -396,8 +396,7 @@ var codec = new Codec('bedrock_old', {
 				}
 			}
 		}
-		obj[model_name] = this.compile({raw: true});
-		content = autoStringify(obj);
+		obj[model_name] = content;
 
 		Blockbench.writeFile(path, {content}, cb);
 	}

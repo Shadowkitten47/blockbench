@@ -175,7 +175,7 @@ class Codec extends EventSystem {
 		if (fs.existsSync(path) && this.overwrite) {
 			this.overwrite(content, path, path => this.afterSave(path))
 		} else {
-			Blockbench.writeFile(path, {content}, path => this.afterSave(path));
+			Blockbench.writeFile(path, { content: autoStringify(content) }, path => this.afterSave(path));
 		}
 	}
 	//overwrite(content, path, cb)
